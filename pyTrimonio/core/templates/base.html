@@ -14,12 +14,13 @@
 </head>
 <body>
 <nav class="navbar navbar-inverse">
-    <a class="navbar-brand active" href="{ url 'home' }">pyTrimonio</a>
+    <a class="navbar-brand active" href="/">pyTrimonio</a>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{% url 'monitores' %}">Monitores<span class="sr-only">(current)</span></a></li>
         <li><a href="{% url 'computadores' %}">Computadores</a></li>
-        <li><a href="#">Impressoras</a></li>
+        <li><a href="{% url 'impressoras' %}">Impressoras</a></li>
+        <li><a href="{% url 'nobreaks' %}">Nobreaks</a></li>
       </ul>
     </div>
 </nav>

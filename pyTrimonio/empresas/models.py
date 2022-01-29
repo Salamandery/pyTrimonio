@@ -16,4 +16,4 @@ class Empresa(models.Model):
     class Meta:
         verbose_name = 'Empresa'
         verbose_name_plural = 'Empresas'
-        ordering = ['company']
+        ordering = ['description']

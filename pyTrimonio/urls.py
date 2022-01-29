@@ -20,12 +20,12 @@ urlpatterns = [
     path('', include('pyTrimonio.core.urls')),
     path('monitores/', include('pyTrimonio.monitores.urls')),
     path('computadores/', include('pyTrimonio.computadores.urls')),
-    path('nobreaks/', include('pyTrimonio.nobreaks.urls'))
-    path('impressoras/', include('pyTrimonio.impressoras.urls'))
-    #path('celulares/', include('pyTrimonio.celulares.urls'))
-    #path('toners/', include('pyTrimonio.toners.urls'))
-    #path('empresas/', include('pyTrimonio.empresas.urls'))
-    #path('estoques/', include('pyTrimonio.estoques.urls'))
-    #path('produtos/', include('pyTrimonio.produtos.urls'))
+    path('nobreaks/', include('pyTrimonio.nobreaks.urls')),
+    path('impressoras/', include('pyTrimonio.impressoras.urls')),
+    #path('celulares/', include('pyTrimonio.celulares.urls')),
+    #path('toners/', include('pyTrimonio.toners.urls')),
+    #path('empresas/', include('pyTrimonio.empresas.urls')),
+    #path('estoques/', include('pyTrimonio.estoques.urls')),
+    #path('produtos/', include('pyTrimonio.produtos.urls')),
     path('admin/', admin.site.urls),
 ]
