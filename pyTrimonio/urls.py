@@ -13,9 +13,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from argparse import Namespace
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+    path('', include('pyTrimonio.core.urls')),
+    path('monitores/', include('pyTrimonio.monitores.urls')),
+    path('computadores/', include('pyTrimonio.computadores.urls')),
+    #path('nobreaks/', include('pyTrimonio.nobreaks.urls'))
+    #path('celulares/', include('pyTrimonio.celulares.urls'))
+    #path('toners/', include('pyTrimonio.toners.urls'))
+    #path('impressoras/', include('pyTrimonio.impressoras.urls'))
+    #path('empresas/', include('pyTrimonio.empresas.urls'))
+    #path('estoques/', include('pyTrimonio.estoques.urls'))
+    #path('produtos/', include('pyTrimonio.produtos.urls'))
     path('admin/', admin.site.urls),
 ]

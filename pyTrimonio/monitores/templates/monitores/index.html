@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'Monitores'|linebreaks}}
+
+{% for monitor in monitores %}
+    {{ monitor.serial }} - {{ monitor.mark }} - {{ monitor.sector}} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}

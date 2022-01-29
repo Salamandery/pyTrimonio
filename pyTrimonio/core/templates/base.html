@@ -1,0 +1,40 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="pyTrimonio - Sistema de Cadastro Patrimonial" />
+    <title>pyTrimonio</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <a class="navbar-brand active" href="{ url 'home' }">pyTrimonio</a>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'monitores' %}">Monitores<span class="sr-only">(current)</span></a></li>
+        <li><a href="{% url 'computadores' %}">Computadores</a></li>
+        <li><a href="#">Impressoras</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="content">
+    {% block container %} 
+    {% endblock %}
+</div>
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+  <div class="container text-center">
+    <small>Copyright &copy; pyTrimonio - Sistema de Cadastro Patrimonial</small>
+  </div>
+</footer>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/bootstrap-theme.js' %}"></script>
+<script src="{% static 'js/npm.js' %}"></script>
+</body>
+</html>

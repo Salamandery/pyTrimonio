@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'Computadores'|linebreaks}}
+
+{% for computador in computadores %}
+    {{ computador.hostname }} - {{ computador.mark }} - {{ computador.ip}} - {{ computador.sector}} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}
