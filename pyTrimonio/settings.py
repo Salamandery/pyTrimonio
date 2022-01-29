@@ -42,13 +42,13 @@ INSTALLED_APPS = [
     'pyTrimonio.core',
     'pyTrimonio.monitores',
     'pyTrimonio.computadores',
+    'pyTrimonio.nobreaks',
+    'pyTrimonio.impressoras',
     #'pyTrimonio.produtos',
     #'pyTrimonio.toners',
-    #'pyTrimonio.impressoras',
-    #'pyTrimonio.nobreaks',
     #'pyTrimonio.celulares',
-    #'pyTrimonio.empresas',
-    #'pyTrimonio.estoques',
+    'pyTrimonio.empresas',
+    'pyTrimonio.estoques',
 ]
 
 MIDDLEWARE = [

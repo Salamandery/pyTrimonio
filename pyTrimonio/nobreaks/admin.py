@@ -9,5 +9,6 @@ class NobreakAdmin(admin.ModelAdmin):
         'sector', 'created_at', 'updated_at'
     ]
     search_fields = ['mark', 'sector']
+    prepopulated_fields = {'description': ('mark','serial',)}
 
 admin.site.register(Nobreak, NobreakAdmin)

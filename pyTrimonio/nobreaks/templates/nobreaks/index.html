@@ -2,10 +2,10 @@
 
 {% block container %}
 
-{{'Monitores'|linebreaks}}
+{{'Nobreaks'|linebreaks}}
 
-{% for monitor in monitores %}
-    {{ monitor.serial }} - {{ monitor.mark }} - {{ monitor.sector}} {{''|linebreaks}}
+{% for nobreak in nobreaks %}
+    {{ nobreak.serial }} - {{ nobreak.mark }} - {{ nobreak.sector}} {{''|linebreaks}}
     {% empty %}
     Sem resultados
 {% endfor %}

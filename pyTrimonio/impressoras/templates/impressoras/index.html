@@ -2,10 +2,10 @@
 
 {% block container %}
 
-{{'Monitores'|linebreaks}}
+{{'Impressoras'|linebreaks}}
 
-{% for monitor in monitores %}
-    {{ monitor.serial }} - {{ monitor.mark }} - {{ monitor.sector}} {{''|linebreaks}}
+{% for impressora in impressoras %}
+    {{ impressora.hostname }} - {{ impressora.mark }} - {{ impressora.ip}} - {{ impressora.sector}} {{''|linebreaks}}
     {% empty %}
     Sem resultados
 {% endfor %}

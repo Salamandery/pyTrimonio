@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'Empresas'|linebreaks}}
+
+{% for empresa in empresas %}
+    {{ empresa.description }} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}
