@@ -16,6 +16,8 @@ Including another URLconf
 from django.urls import path
 from .views import index
 
+app_name = 'nobreaks'
+
 urlpatterns = [
-    path('', index, name="nobreaks"),
+    path('', index, name="lista"),
 ]

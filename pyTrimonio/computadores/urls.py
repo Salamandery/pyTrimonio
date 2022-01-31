@@ -16,6 +16,8 @@ Including another URLconf
 from django.urls import path
 from .views import index
 
+app_name = 'computadores'
+
 urlpatterns = [
-    path('', index, name="computadores"),
+    path('', index, name="lista"),
 ]

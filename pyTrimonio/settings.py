@@ -32,14 +32,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
     'pyTrimonio.core',
+    'pyTrimonio.accounts',
     'pyTrimonio.monitores',
     'pyTrimonio.computadores',
     'pyTrimonio.nobreaks',
@@ -49,6 +43,13 @@ INSTALLED_APPS = [
     #'pyTrimonio.celulares',
     'pyTrimonio.empresas',
     'pyTrimonio.estoques',
+
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,20 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# E-mail configuration
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'Sentinela <sentinela@heat.org.br>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sentinela@heat.org.br'
+EMAIL_HOST_PASSWORD = 'senha'
+EMAIL_PORT = 587
+
+CONTACT_EMAIL = 'contato@heat.org.br'
+
+# Auth
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'core:home'
+LOGOUT_URL = 'accounts:logout'

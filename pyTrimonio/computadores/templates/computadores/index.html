@@ -5,7 +5,7 @@
 {{'Computadores'|linebreaks}}
 
 {% for computador in computadores %}
-    {{ computador.hostname }} - {{ computador.mark }} - {{ computador.ip}} - {{ computador.sector}} {{''|linebreaks}}
+    {{ computador.ip }} - {{ computador.mark }} - {{ computador.ip}} - {{ computador.sector}} {{''|linebreaks}}
     {% empty %}
     Sem resultados
 {% endfor %}

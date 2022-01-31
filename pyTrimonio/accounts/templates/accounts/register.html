@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<div class="content">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+    {{ field.widget }}
+      <div class="form-group">
+        <label 
+          class="control-label" 
+          for="id_{{ field.name }}"
+        >
+          {{ field.label }}
+        </label>
+        {% if 'password' in field.name %}
+          <input 
+            type="password" 
+            class="form-control" 
+            id="{{field.auto_id}}"
+            name="{{field.html_name }}"
+            placeholder="{{ field.label }}"
+          />
+        {% elif field.name == 'email' %}
+          <input 
+            type="email" 
+            class="form-control" 
+            id="{{field.auto_id}}"
+            name="{{field.html_name }}"
+            placeholder="{{ field.label }}"
+          />
+        {% else %}
+          <input 
+            type="text" 
+            class="form-control" 
+            id="{{field.auto_id}}"
+            name="{{field.html_name }}"
+            placeholder="{{ field.label }}"
+          />
+        {% endif %}
+      </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+</div>
+{% endblock %}

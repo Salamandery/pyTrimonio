@@ -1,4 +1,4 @@
-"""pyTrimonio.impressoras URL Configuration
+"""pyTrimonio.accounts URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -13,11 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.contrib.auth.views import LoginView
 from django.urls import path
-from .views import index
+from .views import register
 
-app_name = 'impressoras'
+app_name = 'accounts'
 
 urlpatterns = [
-    path('', index, name="lista"),
+    path('', LoginView.as_view(
+        template_name='login.html'
+    ), name="login"),
+    path('cadastrar/', register, name="register"),
 ]

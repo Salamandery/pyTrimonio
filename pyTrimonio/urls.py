@@ -15,13 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+admin.site.site_header = 'pyTrimonio - Admin'
 
 urlpatterns = [
-    path('', include('pyTrimonio.core.urls')),
-    path('monitores/', include('pyTrimonio.monitores.urls')),
-    path('computadores/', include('pyTrimonio.computadores.urls')),
-    path('nobreaks/', include('pyTrimonio.nobreaks.urls')),
-    path('impressoras/', include('pyTrimonio.impressoras.urls')),
+    path('', include('pyTrimonio.accounts.urls', namespace='accounts')),
+    path('dashboard/', include('pyTrimonio.core.urls', namespace='core')),
+    path('monitores/', include('pyTrimonio.monitores.urls', namespace='monitores')),
+    path('computadores/', include('pyTrimonio.computadores.urls', namespace='computadores')),
+    path('nobreaks/', include('pyTrimonio.nobreaks.urls', namespace='nobreaks')),
+    path('impressoras/', include('pyTrimonio.impressoras.urls', namespace='impressoras')),
     #path('celulares/', include('pyTrimonio.celulares.urls')),
     #path('toners/', include('pyTrimonio.toners.urls')),
     #path('empresas/', include('pyTrimonio.empresas.urls')),
@@ -29,3 +34,6 @@ urlpatterns = [
     #path('produtos/', include('pyTrimonio.produtos.urls')),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

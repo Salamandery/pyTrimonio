@@ -1,0 +1,38 @@
+{% extends 'base_noheader.html' %}
+{% block container %}
+<div class="content login">
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+    <div class="form-group">
+      <label 
+        class="control-label" 
+        for="id_{{ field.name }}"
+      >
+        {{ field.label }}
+      </label>
+      {% if field.name == 'password' %}
+        <input 
+          type="password" 
+          class="form-control" 
+          id="{{field.auto_id}}"
+          name="{{field.html_name }}"
+          placeholder="{{ field.label }}"
+        />
+      {% else %}
+        <input 
+          type="text" 
+          class="form-control" 
+          id="{{field.auto_id}}"
+          name="{{field.html_name }}"
+          placeholder="{{ field.label }}"
+        />
+      {% endif %}
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">ENTRAR</button>
+  </form>
+  <a href="{% url 'accounts:register' %}">Cadastrar</a>
+</div>
+{% endblock %}

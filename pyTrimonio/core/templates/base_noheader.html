@@ -13,18 +13,6 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-    <a class="navbar-brand active" href="{% url 'accounts:login' %}">pyTrimonio</a>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="{% url 'monitores:lista' %}">Monitores<span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url 'computadores:lista' %}">Computadores</a></li>
-        <li><a href="{% url 'impressoras:lista' %}">Impressoras</a></li>
-        <li><a href="{% url 'nobreaks:lista' %}">Nobreaks</a></li>
-        <li><a href="{% url 'accounts:login' %}">Entrar</a></li>
-      </ul>
-    </div>
-</nav>
 <div class="content">
     {% block container %} 
     {% endblock %}
