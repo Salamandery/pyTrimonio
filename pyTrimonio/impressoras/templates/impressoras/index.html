@@ -4,16 +4,16 @@
 
 {{'Impressoras'|linebreaks}}
 
+<div id="impdiv">
 {% for impressora in impressoras %}
-    <div id="impdiv">
         <span><a target="_blank" href="http://{{ impressora.ip }}">{{ impressora.ip}}</a></span> 
         <span>{{ impressora.hostname }}</span>
         <span>{{ impressora.sector}}</span>
         <span><b>{{ impressora.mark }}</b></span>{{''|linebreaks}}
-    </div>
+
     
     {% empty %}
     Sem resultados
 {% endfor %}
-
+</div>
 {% endblock %}
