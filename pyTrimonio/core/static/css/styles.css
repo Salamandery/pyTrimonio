@@ -24,3 +24,8 @@ footer {
   width: 100%;
   font-size: 20px;
 }
+
+#impdiv {
+  display: flex;
+  width: 100%;
+}
