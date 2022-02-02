@@ -22,7 +22,7 @@ admin.site.site_header = 'pyTrimonio - Admin'
 
 urlpatterns = [
     path('', include('pyTrimonio.core.urls', namespace='core')),
-    path('entrar/', include('pyTrimonio.core.urls', namespace='accounts')),
+    path('entrar/', include('pyTrimonio.accounts.urls', namespace='accounts')),
     path('monitores/', include('pyTrimonio.monitores.urls', namespace='monitores')),
     path('computadores/', include('pyTrimonio.computadores.urls', namespace='computadores')),
     path('nobreaks/', include('pyTrimonio.nobreaks.urls', namespace='nobreaks')),
