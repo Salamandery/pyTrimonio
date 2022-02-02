@@ -32,3 +32,6 @@ footer {
 #impdiv span:nth-child(n) {
   width: 300px;
 }
+#impdiv span + span {
+  border: 1px solid #333;
+}
