@@ -5,7 +5,7 @@
 {{'Impressoras'|linebreaks}}
 
 {% for impressora in impressoras %}
-    <a target="_blank" href="http://{{ impressora.ip }}">{{ impressora.ip}}</a> - {{ impressora.hostname }} - {{ impressora.mark }} - {{ impressora.sector}} {{''|linebreaks}}
+    <a target="_blank" href="http://{{ impressora.ip }}">{{ impressora.ip}}</a> - {{ impressora.hostname }} - {{ impressora.sector}} - {{ impressora.mark }} {{''|linebreaks}}
     {% empty %}
     Sem resultados
 {% endfor %}
