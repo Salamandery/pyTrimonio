@@ -20,7 +20,7 @@ from .views import register
 app_name = 'accounts'
 
 urlpatterns = [
-    path('', LoginView.as_view(
+    path('entrar/', LoginView.as_view(
         template_name='login.html'
     ), name="login"),
     path('cadastrar/', register, name="register"),

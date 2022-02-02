@@ -21,8 +21,8 @@ from django.conf.urls.static import static
 admin.site.site_header = 'pyTrimonio - Admin'
 
 urlpatterns = [
-    path('', include('pyTrimonio.accounts.urls', namespace='accounts')),
-    path('dashboard/', include('pyTrimonio.core.urls', namespace='core')),
+    path('', include('pyTrimonio.core.urls', namespace='core')),
+    #path('dashboard/', include('pyTrimonio.core.urls', namespace='core')),
     path('monitores/', include('pyTrimonio.monitores.urls', namespace='monitores')),
     path('computadores/', include('pyTrimonio.computadores.urls', namespace='computadores')),
     path('nobreaks/', include('pyTrimonio.nobreaks.urls', namespace='nobreaks')),
