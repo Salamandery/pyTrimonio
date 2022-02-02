@@ -5,9 +5,21 @@
 {{'Impressoras'|linebreaks}}
 
 {% for impressora in impressoras %}
-    <a target="_blank" href="http://{{ impressora.ip }}">{{ impressora.ip}}</a> - {{ impressora.hostname }} - {{ impressora.sector}} - <b>{{ impressora.mark }}</b> {{''|linebreaks}}
+    <div id="impdiv">
+        <a target="_blank" href="http://{{ impressora.ip }}">{{ impressora.ip}}</a> - 
+        <span>{{ impressora.hostname }}</span> - {{ impressora.sector}} - <b>{{ impressora.mark }}</b> 
+        <span>{{ impressora.sector}}</span>
+        <span><b>{{ impressora.mark }}</b></span>{{''|linebreaks}}
+    </div>
+    
     {% empty %}
     Sem resultados
 {% endfor %}
 
 {% endblock %}
+<style>
+    #impdiv {
+        display: flex;
+        width: 100%;
+    }
+</style>
