@@ -8,7 +8,7 @@ class Impressora(models.Model):
     hostname = models.CharField('Nome da Impressora', 
         max_length=50, blank=True, null=True
     )
-    ip = models.CharField('IP', max_length=12, blank=True, null=True)
+    ip = models.CharField('IP', max_length=16, blank=True, null=True)
     mac = models.CharField('MAC', max_length=18, blank=True, null=True)
     mark = models.CharField('Marca', max_length=100)
     model = models.CharField('Modelo', max_length=100, blank=True, null=True)
