@@ -29,3 +29,6 @@ footer {
   display: flex;
   width: 100%;
 }
+#impdiv span:nth-child(n) {
+  width: 300px;
+}
