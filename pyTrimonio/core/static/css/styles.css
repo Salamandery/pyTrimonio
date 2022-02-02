@@ -25,11 +25,14 @@ footer {
   font-size: 20px;
 }
 
+#listdiv {
+  padding: 10px;
+  border: 1px solid #333;
+}
+
 #impdiv {
   display: flex;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #333;
 }
 #impdiv span:nth-child(n) {
   width: 300px;
