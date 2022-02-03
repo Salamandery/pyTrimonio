@@ -26,4 +26,4 @@ class Impressora(models.Model):
     class Meta:
         verbose_name = 'Impressora'
         verbose_name_plural = 'Impressoras'
-        ordering = ['mark', 'sector', 'ip']
+        ordering = ['ip', 'mark', 'sector']
