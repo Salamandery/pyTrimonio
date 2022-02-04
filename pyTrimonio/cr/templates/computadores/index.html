@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'CR'|linebreaks}}
+
+{% for cr in crs %}
+    {{ cr.ip }} - {{ cr.mark }} - {{ cr.ip}} - {{ cr.sector}} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}

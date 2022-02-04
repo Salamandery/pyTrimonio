@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'pyTrimonio.accounts',
     'pyTrimonio.monitores',
     'pyTrimonio.computadores',
+    'pyTrimonio.cr',
     'pyTrimonio.nobreaks',
     'pyTrimonio.impressoras',
     #'pyTrimonio.produtos',
