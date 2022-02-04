@@ -25,7 +25,7 @@ urlpatterns = [
     path('entrar/', include('pyTrimonio.accounts.urls', namespace='accounts')),
     path('monitores/', include('pyTrimonio.monitores.urls', namespace='monitores')),
     path('computadores/', include('pyTrimonio.computadores.urls', namespace='computadores')),
-    path('cr/', include('pyTrimonio.cr.urls', namespace='cr')),
+    path('crs/', include('pyTrimonio.cr.urls', namespace='cr')),
     path('nobreaks/', include('pyTrimonio.nobreaks.urls', namespace='nobreaks')),
     path('impressoras/', include('pyTrimonio.impressoras.urls', namespace='impressoras')),
     #path('celulares/', include('pyTrimonio.celulares.urls')),
