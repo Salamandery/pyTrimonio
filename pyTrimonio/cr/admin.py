@@ -11,6 +11,4 @@ class CrAdmin(admin.ModelAdmin):
     search_fields = ['mark', 'sector', 'ip', 'hostname']
     prepopulated_fields = {'description': ('hostname','mark',)}
 
-    return {}
-
 admin.site.register(Cr, CrAdmin)
