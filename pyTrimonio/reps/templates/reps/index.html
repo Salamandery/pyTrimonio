@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'REP'|linebreaks}}
+
+{% for rep in reps %}
+    {{ rep.ip }} - {{ rep.mark }} - {{ rep.ip}} - {{ rep.sector}} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}
