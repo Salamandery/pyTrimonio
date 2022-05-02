@@ -11,7 +11,7 @@ class Network(models.Model):
     identified = models.CharField('Nª Patrimônio', max_length=100, blank=True, null=True)
     tp_identified = models.CharField('Tipo do Patrimônio', max_length=100, blank=True, null=True)
     description = models.CharField('Descrição', max_length=200, blank=True, null=True)
-    type = models.CharField('Linha', max_length=100, blank=True, null=True)
+    type = models.CharField('Tipo', max_length=100, blank=True, null=True)
     sector = models.CharField('Setor', max_length=200, blank=True, null=True)
     block = models.CharField('Bloco', max_length=100, blank=True, null=True)
     location = models.CharField('Localidade', max_length=200, blank=True, null=True)
