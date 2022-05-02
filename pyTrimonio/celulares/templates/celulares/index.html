@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'celulares'|linebreaks}}
+
+{% for celular in celulares %}
+    {{ celular.number }} - {{ rep.model }} - {{ rep.mark }} - {{ rep.user }} - {{ rep.location}} - {{ rep.sector}} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}

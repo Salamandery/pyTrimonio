@@ -6,7 +6,7 @@ class ComputadorAdmin(admin.ModelAdmin):
     list_display = [
         'hostname', 'ip',
         'mark', 'sector', 
-        'created_at', 'updated_at'
+        'location', 'updated_at'
     ]
     search_fields = ['mark', 'sector', 'ip', 'hostname']
     prepopulated_fields = {'description': ('hostname','mark',)}

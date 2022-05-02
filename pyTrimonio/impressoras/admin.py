@@ -6,9 +6,9 @@ class ImpressoraAdmin(admin.ModelAdmin):
     list_display = [
         'hostname', 'ip',
         'mark', 'sector', 
-        'created_at', 'updated_at'
+        'location', 'updated_at'
     ]
-    search_fields = ['mark', 'sector', 'ip', 'hostname']
+    search_fields = ['mark', 'sector', 'ip', 'hostname', 'location']
     prepopulated_fields = {'description': ('hostname','mark',)}
 
 admin.site.register(Impressora, ImpressoraAdmin)

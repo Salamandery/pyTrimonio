@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'pyTrimonio.impressoras',
     #'pyTrimonio.produtos',
     #'pyTrimonio.toners',
-    #'pyTrimonio.celulares',
+    'pyTrimonio.celulares',
+    'pyTrimonio.networks',
     'pyTrimonio.empresas',
     'pyTrimonio.estoques',
 

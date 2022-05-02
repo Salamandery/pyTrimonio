@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block container %}
+
+{{'networks'|linebreaks}}
+
+{% for network in networks %}
+    {{ network.model }} - {{ network.mark }} - {{ network.location}} - {{ network.sector}} {{''|linebreaks}}
+    {% empty %}
+    Sem resultados
+{% endfor %}
+
+{% endblock %}
